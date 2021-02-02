@@ -25,7 +25,16 @@ const defaultData = {
 
 const FetchData = (url) => {
   return new Promise((resolve) => {
-    resolve({'data': defaultData.books});
+    const localStorageData = localStorage.getItem(url);
+    if(localStorageData == null) {
+      console.log('No saved data found');
+      localStorage.setItem(url, JSON.stringify(defaultData));
+      resolve({'data': defaultData});
+    }
+    else {
+      console.log('Saved data found');
+      resolve({'data': JSON.parse(localStorageData)})     
+    }   
   });
 }
 

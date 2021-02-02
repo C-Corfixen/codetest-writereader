@@ -8,10 +8,10 @@ const BookList = () => {
 
   useEffect(() => {
     //Fake api call
-    FetchData()
+    FetchData('codetest-bookdata')
     .then((response) => {
       console.log(response);
-      setBooks(response.data);
+      setBooks(response.data.books);
     });
   }, []);
 
