@@ -5,4 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #f8f8f8;
+  background-color: #222;
+}
+
+a {
+  color: #f8f8f8;
+  text-decoration: none;
 }

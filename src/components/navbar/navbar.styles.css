@@ -1,0 +1,26 @@
+.navbar {
+  height: 60px;
+  width: 100%;
+  padding: 0 10% 0 10%;
+  background-color: #222;
+  color: #f8f8f8;
+  line-height: 60px;
+  vertical-align: middle;
+}
+
+.navbar-logo {
+  font-size: 30px;
+  margin: 0;
+  color: #f8f8f8;
+}
+
+.navbar-links {
+  display: inline-block;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: inline-block;
+}
