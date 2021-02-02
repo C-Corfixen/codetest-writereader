@@ -7,7 +7,7 @@ import HomePage from './pages/home-page/home-page.component';
 import LoginForm from './components/login-form/login-form.component';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   return (
     <BrowserRouter>

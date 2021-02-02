@@ -2,7 +2,6 @@ import BookList from '../../components/book-list/book-list.component';
 import './home-page.styles.css';
 
 const HomePage = ({loggedIn}) => {
-  console.log(loggedIn);
   return(
     <div className="home-page-container">
       { !loggedIn && (
