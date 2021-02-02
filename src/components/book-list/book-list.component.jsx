@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import { FetchData } from '../../api/data.service';
+import BookCard from '../book-card/book-card.component';
 
 const BookList = () => {
   const [books, setBooks] = useState(false);
@@ -16,9 +17,7 @@ const BookList = () => {
 
   return(
     <div className="book-list">
-      { books && books.map((book, i) => (
-        <div key={i}>{ book.title }</div>
-      ))}
+      { books && books.map((book, i) => <BookCard key={i} book={book} />)}
       { !books && <p>You have no books!</p> }
     </div>
   )
