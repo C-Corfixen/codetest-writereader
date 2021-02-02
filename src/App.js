@@ -12,9 +12,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar loggedIn={loggedIn} />
+        <Navbar loggedIn={loggedIn} logout={setLoggedIn} />
         <Switch>
-          <Route exact path={['/', 'home']} component={HomePage}></Route>
+          <Route exact path={['/', 'home']} component={() => <HomePage loggedIn={loggedIn} />}></Route>
           <Route exact path="/addBook" component={AddBookPage}></Route>
           <Route exact path="/login" component={() => <LoginForm submitFunction={setLoggedIn} />}></Route>
         </Switch>
