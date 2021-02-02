@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <Navbar loggedIn={loggedIn} logout={setLoggedIn} />
         <Switch>
-          <Route exact path={['/', 'home']} component={() => <HomePage loggedIn={loggedIn} />}></Route>
+          <Route exact path="/" component={() => <HomePage loggedIn={loggedIn} />}></Route>
           <Route exact path="/addBook" component={AddBookPage}></Route>
           <Route exact path="/login" component={() => <LoginForm submitFunction={setLoggedIn} />}></Route>
         </Switch>

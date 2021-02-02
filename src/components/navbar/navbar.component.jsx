@@ -5,9 +5,9 @@ import './navbar.styles.css';
 const Navbar = ({loggedIn, logout}) => {
   return(
     <div className="navbar">
-      <Link to="/home" className="navbar-logo">Bookshelf - Codetest</Link>
+      <Link to="/" className="navbar-logo">Bookshelf - Codetest</Link>
       <ul className="navbar-links">
-        <Link to="/home"><li>Home</li></Link>
+        <Link to="/"><li>Home</li></Link>
         <Link to="/addBook"><li>Add book</li></Link>
         { !loggedIn && (
           <Link to="/login"><li>Login</li></Link>
