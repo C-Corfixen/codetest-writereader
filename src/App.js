@@ -1,15 +1,20 @@
+import { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/navbar/navbar.component';
+import AddBookPage from './pages/add-book-page/add-book-page.component';
 import HomePage from './pages/home-page/home-page.component';
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar />
+        <Navbar loggedIn={loggedIn} />
         <Switch>
-          <Route path="/" component={HomePage}></Route>
+          <Route exact path={['/', 'home']} component={HomePage}></Route>
+          <Route exact path="/addBook" component={AddBookPage}></Route>
         </Switch>
       </div>
     </BrowserRouter>
