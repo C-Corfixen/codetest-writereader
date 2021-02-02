@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/navbar/navbar.component';
 import AddBookPage from './pages/add-book-page/add-book-page.component';
 import HomePage from './pages/home-page/home-page.component';
+import LoginForm from './components/login-form/login-form.component';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path={['/', 'home']} component={HomePage}></Route>
           <Route exact path="/addBook" component={AddBookPage}></Route>
+          <Route exact path="/login" component={() => <LoginForm submitFunction={setLoggedIn} />}></Route>
         </Switch>
       </div>
     </BrowserRouter>
