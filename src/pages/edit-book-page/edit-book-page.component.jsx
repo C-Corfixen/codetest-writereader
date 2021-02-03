@@ -33,7 +33,7 @@ const EditBookPage = (props) => {
   }
 
   return(
-    <div className="edit-book-container">
+    <div className="col-sm-12 col-md-6">
       { selectedBook && <BookForm headline="Edit book" bookData={selectedBook} submitFunction={editBookData} ><button>Update book</button></BookForm> }
     </div>
   )

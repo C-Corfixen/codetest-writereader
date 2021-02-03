@@ -30,12 +30,12 @@ const LoginForm = ({submitFunction}) => {
       <form onSubmit={handleSubmit}>
 
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name: (codetest)</label>
           <input type="text" className="form-control" id="name" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password: (codetest123)</label>
           <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
 

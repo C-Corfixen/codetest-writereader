@@ -5,7 +5,7 @@ import BookForm from "../../components/book-form/book-form.component"
 import './add-book-page.styles.css';
 
 
-const AddBookPage = () => {
+const AddBookPage = ({loggedIn}) => {
   const history = useHistory();
 
   const addBookData = (bookFormData) => {
@@ -21,8 +21,9 @@ const AddBookPage = () => {
   }
 
   return(
-    <div className="add-book-container">
-      <BookForm headline="Add new book" submitFunction={addBookData} ><button>Add new book</button></BookForm>
+    <div className="col-sm-12 col-md-6">
+      { loggedIn && <BookForm headline="Add new book" submitFunction={addBookData} ><button>Add new book</button></BookForm> }
+      { !loggedIn && <p>Please login to add books</p> }
     </div>
   )
 }

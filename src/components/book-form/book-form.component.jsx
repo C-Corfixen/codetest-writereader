@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 
 const BookForm = ({headline, submitFunction, bookData, ...otherProps}) => {
   const [title, setTitle] = useState('');
@@ -19,7 +19,7 @@ const BookForm = ({headline, submitFunction, bookData, ...otherProps}) => {
   }
 
   return(
-    <div>
+    <Fragment>
       <h2>{ headline }</h2>
       <form onSubmit={handleSubmit}>
 
@@ -40,7 +40,7 @@ const BookForm = ({headline, submitFunction, bookData, ...otherProps}) => {
 
         { otherProps.children }
       </form>
-    </div>
+    </Fragment>
   )
 }
 
