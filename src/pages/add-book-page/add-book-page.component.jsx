@@ -17,7 +17,7 @@ const AddBookPage = () => {
     })
     .catch((error) => {
       console.log(error);
-    })
+    });
   }
 
   return(

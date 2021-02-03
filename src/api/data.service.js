@@ -58,7 +58,17 @@ const addData = (options) => {
   }); 
 }
 
+const updateData = (options) => {
+  const dataUrl = options.url;
+  const newData = options.data
+  return new Promise((resolve) => {
+    localStorage.setItem(dataUrl, JSON.stringify({'books': [...newData]}));
+    resolve('items updated');
+  });
+}
+
 export {
   fetchData,
-  addData
+  addData,
+  updateData
 }

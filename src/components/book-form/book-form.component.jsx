@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const BookForm = ({headline, submitFunction, ...otherProps}) => {
+const BookForm = ({headline, submitFunction, bookData, ...otherProps}) => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [pages, setPages] = useState('');
+
+  useEffect(() => {
+    if(bookData) {
+      setTitle(bookData.title);
+      setAuthor(bookData.author);
+      setPages(bookData.pages);
+    }
+  }, [bookData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

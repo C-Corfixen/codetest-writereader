@@ -20,6 +20,7 @@ const useBookData = (url) => {
 
   const changeData = (newData) => {
     console.log(newData);
+    setData(newData);
   }
 
   return {
