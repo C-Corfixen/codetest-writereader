@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { Login } from '../../api/auth.service';
+import { login } from '../../api/auth.service';
 
 import './login-form.styles.css';
 
@@ -13,7 +13,7 @@ const LoginForm = ({submitFunction}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Login({name, password}).then((response) => {
+    login({name, password}).then((response) => {
       console.log(response);
       if(response.error) {
         setError(response.error)

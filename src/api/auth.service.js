@@ -3,7 +3,7 @@ const correctLogin = {
   "password": "codetest123"
 };
 
-const Login = ({name, password}) => {
+const login = ({name, password}) => {
   return new Promise((resolve) => {
     if(correctLogin.name !== name) {
       resolve({"error": "Incorrect name"});
@@ -17,11 +17,11 @@ const Login = ({name, password}) => {
   });
 }
 
-const Logout = () => {
+const logout = () => {
   console.log('You have logged out');
 }
 
 export {
-  Login,
-  Logout
+  login,
+  logout
 }
