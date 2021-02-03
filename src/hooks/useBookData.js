@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { FetchData } from '../api/data.service';
 
-const useBookData = ({url}) => {
+const useBookData = (url) => {
   const [data, setData] = useState();
   const [error, setError] = useState();
 
