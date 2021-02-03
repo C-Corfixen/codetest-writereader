@@ -9,6 +9,13 @@ body {
   background-color: #222;
 }
 
+.content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 a {
   color: #f8f8f8;
   text-decoration: none;

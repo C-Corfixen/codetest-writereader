@@ -5,13 +5,19 @@ const BookCard = ({book, deleteFunction}) => {
   const { title, author, pages, id } = book;
 
   return(
-    <div className="book-card">
-      <h2>{ title }</h2>
-      <p>Author: { author }</p>
-      <p>Pages: { pages }</p>
-      <Link to={'editBook/'+id}><button>Edit book</button></Link>
-      <button onClick={() => deleteFunction(id)}>Delete book</button>
-    </div>
+    <div className="col-sm-4">
+      <div className="card">
+        <div className="card-body">
+          <h2 className="card-title">{ title }</h2>
+          <p className="card-text">
+            Author: { author }<br />
+            Pages: { pages }
+          </p>
+          <Link to={'editBook/'+id}><button>Edit book</button></Link>
+          <button className="delete-button" onClick={() => deleteFunction(id)}>Delete book</button>
+        </div>  
+      </div>
+    </div>     
   )
 }
 

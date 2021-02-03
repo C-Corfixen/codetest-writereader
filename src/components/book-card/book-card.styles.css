@@ -1,4 +1,17 @@
-.book-card {
-  width: 33%;
-  display: inline-block;
+.card {
+  height: 250px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.card-body {
+  color: #222;
+}
+
+.delete-button {
+  margin-left: 10px;
 }

@@ -29,14 +29,14 @@ const LoginForm = ({submitFunction}) => {
     <div className="login-container">
       <form onSubmit={handleSubmit}>
 
-        <div className="input-field">
+        <div className="form-group">
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+          <input type="text" className="form-control" id="name" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
 
-        <div className="input-field">
+        <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
 
         { error && <p>{ error }</p>}

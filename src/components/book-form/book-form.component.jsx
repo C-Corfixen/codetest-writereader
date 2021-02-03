@@ -23,19 +23,19 @@ const BookForm = ({headline, submitFunction, bookData, ...otherProps}) => {
       <h2>{ headline }</h2>
       <form onSubmit={handleSubmit}>
 
-        <div className="input-field">
+        <div className="form-group">
           <label htmlFor="title">Book title:</label>
-          <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+          <input type="text" className="form-control" id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
 
-        <div className="input-field">
+        <div className="form-group">
           <label htmlFor="author">Book author:</label>
-          <input type="text" id="author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+          <input type="text" className="form-control" id="author" value={author} onChange={(e) => setAuthor(e.target.value)} />
         </div>
 
-        <div className="input-field">
+        <div className="form-group">
           <label htmlFor="pages">Number of pages:</label>
-          <input type="number" id="pages" value={pages} onChange={(e) => setPages(e.target.value)} />
+          <input type="number" className="form-control" id="pages" value={pages} onChange={(e) => setPages(e.target.value)} />
         </div>        
 
         { otherProps.children }

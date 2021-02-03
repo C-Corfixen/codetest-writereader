@@ -1,7 +1,5 @@
 .navbar {
-  height: 60px;
-  width: 80%;
-  padding: 0 10% 0 10%;
+  padding: 0;
   background-color: #222;
   color: #f8f8f8;
   line-height: 60px;
@@ -16,11 +14,17 @@
 
 .navbar-links {
   display: inline-block;
-  width: 200px;
+  width: auto;
   margin: 0;
   padding: 0;
 }
 
 .navbar-links li {
+  margin-left: 20px;
   display: inline-block;
+  cursor: pointer;
+}
+
+.navbar-links a:hover {
+  color: #eee;
 }

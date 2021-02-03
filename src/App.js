@@ -12,14 +12,16 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App container">
         <Navbar loggedIn={loggedIn} logout={setLoggedIn} />
-        <Switch>
-          <Route exact path="/" component={() => <HomePage loggedIn={loggedIn} />}></Route>
-          <Route exact path="/addBook" component={AddBookPage}></Route>
-          <Route exact path="/editBook/:id" component={EditBookPage}></Route>
-          <Route exact path="/login" component={() => <LoginForm submitFunction={setLoggedIn} />}></Route>
-        </Switch>
+        <div className="content">
+          <Switch>
+            <Route exact path="/" component={() => <HomePage loggedIn={loggedIn} />}></Route>
+            <Route exact path="/addBook" component={AddBookPage}></Route>
+            <Route exact path="/editBook/:id" component={EditBookPage}></Route>
+            <Route exact path="/login" component={() => <LoginForm submitFunction={setLoggedIn} />}></Route>
+          </Switch>
+        </div>        
       </div>
     </BrowserRouter>
     
