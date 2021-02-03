@@ -4,14 +4,13 @@ import useBookData from '../../hooks/useBookData';
 import BookCard from '../book-card/book-card.component';
 
 const BookList = () => {
-  const { data: books, error } = useBookData('codetest-bookdata');
+  const { data: books, error, changeData } = useBookData('codetest-bookdata');
 
-  useEffect(() => {
-    console.log(books);
-  }, [books]);
-
-  const deleteBook = () => {
+  const deleteBook = (id) => {
     console.log('delete book!');
+    const filteredData = books.filter(book => book.id !== id);
+    const updatedData = [...filteredData];
+    changeData(updatedData);
   }
 
   return(

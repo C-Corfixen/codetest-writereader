@@ -10,7 +10,7 @@ const BookCard = ({book, deleteFunction}) => {
       <p>Author: { author }</p>
       <p>Pages: { pages }</p>
       <Link to={'editBook/'+id}><button>Edit book</button></Link>
-      <button onClick={deleteFunction}>Delete book</button>
+      <button onClick={() => deleteFunction(id)}>Delete book</button>
     </div>
   )
 }

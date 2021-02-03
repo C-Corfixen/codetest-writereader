@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { fetchData } from '../api/data.service';
+import { fetchData, updateData } from '../api/data.service';
 
 const useBookData = (url) => {
   const [data, setData] = useState();
@@ -19,8 +19,10 @@ const useBookData = (url) => {
   }, [url]);
 
   const changeData = (newData) => {
-    console.log(newData);
-    setData(newData);
+    updateData({url, 'data': newData})
+    .then(() => {
+      setData(newData);
+    });  
   }
 
   return {
