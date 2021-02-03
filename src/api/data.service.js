@@ -23,12 +23,13 @@ const defaultData = {
   ]
 };
 
-const FetchData = (url) => {
+const fetchData = (url) => {
+  const dataUrl = url;
   return new Promise((resolve) => {
-    const localStorageData = localStorage.getItem(url);
+    const localStorageData = localStorage.getItem(dataUrl);
     if(localStorageData == null) {
       console.log('No saved data found');
-      localStorage.setItem(url, JSON.stringify(defaultData));
+      localStorage.setItem(dataUrl, JSON.stringify(defaultData));
       resolve({'data': defaultData});
     }
     else {
@@ -38,6 +39,20 @@ const FetchData = (url) => {
   });
 }
 
+const addData = (options) => {
+  const dataUrl = options.url;
+  const { title, author, pages } = options.data;
+
+  return new Promise((resolve) => {
+    const currentData = JSON.parse(localStorage.getItem(dataUrl));
+    const mergedData = {'books': [...currentData.books, {title, author, pages}]};
+    localStorage.setItem(dataUrl, JSON.stringify(mergedData));
+
+    resolve('item added');
+  }); 
+}
+
 export {
-  FetchData
+  fetchData,
+  addData
 }
