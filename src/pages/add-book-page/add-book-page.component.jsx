@@ -22,7 +22,7 @@ const AddBookPage = () => {
 
   return(
     <div className="add-book-container">
-      <BookForm submitFunction={addBookData}/>
+      <BookForm headline="Add new book" submitFunction={addBookData} ><button>Add new book</button></BookForm>
     </div>
   )
 }

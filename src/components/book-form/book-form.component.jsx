@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const BookForm = ({submitFunction}) => {
+const BookForm = ({headline, submitFunction, ...otherProps}) => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [pages, setPages] = useState('');
@@ -12,7 +12,7 @@ const BookForm = ({submitFunction}) => {
 
   return(
     <div>
-      <h2>Add new book</h2>
+      <h2>{ headline }</h2>
       <form onSubmit={handleSubmit}>
 
         <div className="input-field">
@@ -30,7 +30,7 @@ const BookForm = ({submitFunction}) => {
           <input type="number" id="pages" value={pages} onChange={(e) => setPages(e.target.value)} />
         </div>        
 
-        <button>Add book!</button>
+        { otherProps.children }
       </form>
     </div>
   )
